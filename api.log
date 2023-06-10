@@ -1,0 +1,107 @@
+Watching for file changes with StatReloader
+C:\Users\Kailash Kumar\OneDrive\Desktop\New folder\stockApi\stockApp\views.py changed, reloading.
+Watching for file changes with StatReloader
+Method Not Allowed: /api/stockData/
+Internal Server Error: /api/stockData/
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python310\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Python310\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+TypeError: stockData.post() takes 1 positional argument but 2 were given
+C:\Users\Kailash Kumar\OneDrive\Desktop\New folder\stockApi\stockApp\views.py changed, reloading.
+Watching for file changes with StatReloader
+Method Not Allowed: /api/stockData/
+Method Not Allowed: /api/stockData/
+Method Not Allowed: /api/stockData/
+C:\Users\Kailash Kumar\OneDrive\Desktop\New folder\stockApi\stockApp\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Kailash Kumar\OneDrive\Desktop\New folder\stockApi\stockApp\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Kailash Kumar\OneDrive\Desktop\New folder\stockApi\stockApp\views.py changed, reloading.
+Watching for file changes with StatReloader
+Method Not Allowed: /api/stockData/
+Method Not Allowed: /api/stockData/
+Method Not Allowed: /api/stockData/
+Method Not Allowed: /api/stockData/
+C:\Users\Kailash Kumar\OneDrive\Desktop\New folder\stockApi\stockApp\views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /api/stockData/
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python310\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Python310\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Python310\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Python310\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Python310\lib\site-packages\rest_framework\views.py", line 492, in dispatch
+    request = self.initialize_request(request, *args, **kwargs)
+  File "C:\Python310\lib\site-packages\rest_framework\views.py", line 391, in initialize_request
+    return Request(
+  File "C:\Python310\lib\site-packages\rest_framework\request.py", line 154, in __init__
+    assert isinstance(request, HttpRequest), (
+AssertionError: The `request` argument must be an instance of `django.http.HttpRequest`, not `stockApp.views.stockData`.
+C:\Users\Kailash Kumar\OneDrive\Desktop\New folder\stockApi\stockApp\views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /api/stockData/
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python310\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Python310\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+TypeError: stockData.get() takes 1 positional argument but 2 were given
+C:\Users\Kailash Kumar\OneDrive\Desktop\New folder\stockApi\stockApp\views.py changed, reloading.
+Watching for file changes with StatReloader
+API call made: https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=META&outputsize=compact&apikey=X86NOH6II01P7R24
+C:\Users\Kailash Kumar\OneDrive\Desktop\New folder\stockApi\stockApi\settings.py changed, reloading.
+Watching for file changes with StatReloader
+API call made: https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=META&outputsize=compact&apikey=X86NOH6II01P7R24
+API call made: https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=META&outputsize=compact&apikey=X86NOH6II01P7R24
+C:\Users\Kailash Kumar\OneDrive\Desktop\New folder\stockApi\stockApi\settings.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Kailash Kumar\OneDrive\Desktop\New folder\stockApi\stockApi\settings.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Kailash Kumar\OneDrive\Desktop\New folder\stockApi\stockApi\settings.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Kailash Kumar\OneDrive\Desktop\New folder\stockApi\stockApi\settings.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Kailash Kumar\OneDrive\Desktop\New folder\stockApi\stockApi\settings.py changed, reloading.
+Watching for file changes with StatReloader
