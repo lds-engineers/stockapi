@@ -92,8 +92,8 @@ REST_FRAMEWORK = {
         'rest_framework.throttling.UserRateThrottle',
     ],
     'DEFAULT_THROTTLE_RATES': {
-        'admin': '100/day',  # Rate limit for anonymous users
-        'user': '10/minute',  # Rate limit for authenticated users
+        'user': '100/day',  # Rate limit for anonymous users
+        'anon': '10/minute',  # Rate limit for authenticated users
     },
 }
 

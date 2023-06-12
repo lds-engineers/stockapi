@@ -14,13 +14,16 @@ from django.http import JsonResponse
 from decouple import config
 import logging
 logger = logging.getLogger(__name__)
+from django.views.decorators.csrf import csrf_exempt
+from django.utils.decorators import method_decorator
 
 
 @api_view(['POST'])
 def register_user(request):
     serializer = UserSerializer(data=request.data)
     if serializer.is_valid():
-        serializer.save()
+        # serializer.save()
+        print(serializer)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
@@ -32,9 +35,11 @@ def allUser(request):
     serializer = AllUserSerializer(users, many=True)
     return Response(serializer.data)
 
-
 class LoginAPIView(APIView):
-        def get(self, request):
+        @method_decorator(csrf_exempt)
+        def dispatch(self, *args, **kwargs):
+            return super(LoginAPIView, self).dispatch(*args, **kwargs)
+        def post(self, request):
             serializer = LoginSerializer(data=request.data)
             serializer.is_valid(raise_exception=True)
             username = serializer.validated_data['username']
@@ -61,14 +66,20 @@ def logout_view(request):
 class stockData(APIView):
     throttle_classes = [UserRateThrottle]
     throttle_scope = 'user'
-    def get(self,request):
-        url = f"https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=META&outputsize=compact&apikey={config('API_KEY')}"  # Replace with the URL of the external API
-        logger.info('API call made: %s', url)
-        response = requests.get(url)
-        if response.status_code == 200:
-            data = response.json()
-            # Process the retrieved data as needed
-            return JsonResponse(data)
+    def post(self,request):
+        symbol = request.POST.get('symbol')
+        if symbol:
+            url = f"https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol={symbol}&outputsize=compact&apikey={config('API_KEY')}"  # Replace with the URL of the external API
+            logger.info('API call made: %s', url)
+            response = requests.get(url)
+            if response.status_code == 200:
+                data = response.json()
+                # Process the retrieved data as needed
+                return JsonResponse(data)
+            else:
+                # Handle the case when the request to the external API fails
+                return JsonResponse({'error': 'Internal server error'}, status=500)
         else:
-            # Handle the case when the request to the external API fails
-            return JsonResponse({'error': 'Internal server error'}, status=500)
+            return JsonResponse({'message' : 'Please enter symbol'},status=400)  
+        
+        
